@@ -26,11 +26,11 @@ $(document).on("click", "h5", function() {
       // The title of the article
       $("#notes").append("<h5 align='center'>" + data.title + "</h5>");
       // An input to enter a new title
-      $("#notes").append("<input id='titleinput' name='title' >");
+      $("#notes").append("<input id='titleinput' name='title' ><br>");
       // A textarea to add a new note body
       $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
       // A button to submit a new note, with the id of the article saved to it
-      $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+      $("#notes").append("<br><button data-id='" + data._id + "' id='savenote'>Save Note</button>");
 
       // If there's a note in the article
       if (data.note) {
