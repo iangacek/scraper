@@ -25,13 +25,13 @@ $(document).on("click", "h5", function() {
   }).then(function(data) {
     console.log(data);
     $("#notes").append("<h5 align='center'>" + data.title + "</h5>");
-    $("#notes").append("<input id='titleinput' name='title' >");
-    $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
+    $("#notes").append("<p>Title</p><input id='titleinput' name='title' ><br>");
+    $("#notes").append("<p>Body</p><textarea id='bodyinput' name='body'></textarea><br>");
     $("#notes").append(
-      "<button data-id='" + data._id + "' id='savenote'>Save Note</button>"
+      "<button class='btn btn-secondary' data-id='" + data._id + "' id='savenote'>Save Note</button>"
     );
     $("#notes").append(
-      "<button data-id='" + data._id + "' id='deletenote'>Clear Note</button>"
+      "<button class='btn btn-secondary' data-id='" + data._id + "' id='deletenote'>Clear Note</button>"
     );
     if (data.note) {
       $("#titleinput").val(data.note.title);
