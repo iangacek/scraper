@@ -13,3 +13,11 @@
 .card-header {
     margin: 5px;
 }
+
+.form {
+    align-content: center;
+}
+
+#notes {
+    text-align: center;
+}
